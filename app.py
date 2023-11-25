@@ -24,7 +24,7 @@ def start(update: Update, context: CallbackContext):
 def generate_avatar(update: Update, context: CallbackContext):
     name = '+'.join(context.args)
     if name:
-        avatar_url = "https://ui-avatars.com/api/?name={}&size=512".format(name.strip())
+        avatar_url = "https://ui-avatars.com/api/?name={}&size=512&background=random".format(name.strip())
         update.message.reply_photo(photo=avatar_url)
     else:
         update.message.reply_text("Please enter a name to generate an avatar.")
