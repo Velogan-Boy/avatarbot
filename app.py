@@ -18,7 +18,7 @@ def respond():
 
     chat_id = update.message.chat.id
     msg_id = update.message.message_id
-    
+
     #Telegram understands UTF-8, so encode text for unicode compatibility
     text = update.message.text.encode('utf-8').decode()
     #for debugging purposes only
@@ -50,7 +50,10 @@ def respond():
 
 @app.route('/set_webhook', methods=['GET', 'POST'])
 def set_webhook():
+   print(URL)
+   print(TOKEN)
    s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
+   print(s)
    if s:
        return "webhook setup ok"
    else:
