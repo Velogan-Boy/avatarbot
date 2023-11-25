@@ -48,6 +48,7 @@ def respond():
 
     return 'ok'
 
+
 @app.route('/set_webhook', methods=['GET', 'POST'])
 def set_webhook():
    print(URL)
@@ -59,7 +60,7 @@ def set_webhook():
    else:
        return "webhook setup failed"
 
-@app.route('/')
+@app.route('/',methods=['GET', 'POST'])
 def index():
    return '.'
 
