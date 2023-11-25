@@ -1,8 +1,0 @@
-{
-  "functions": {
-    "api/app.py": {
-      "runtime": "python@3.11.1",
-      "includeFiles": "app.py,credentials.py,requirements.txt"
-    }
-  }
-}
