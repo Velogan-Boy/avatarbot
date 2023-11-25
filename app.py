@@ -60,8 +60,8 @@ def set_webhook():
 def index():
    return '.'
 
-
 if __name__ == '__main__':
-   app.run(threaded=True)
+
+    app.run(host='0.0.0.0', port=8080, threaded = True)
 
         
